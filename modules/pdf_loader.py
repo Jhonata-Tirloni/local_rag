@@ -11,9 +11,7 @@ vector_store = initialize_vector_store()
 loader = PyPDFLoader(
     r"C:\Users\jhonata_tirloni\Documents\Github\local_rag\example_pdf\d&d_guia_solo.pdf"
 )
-
 docs = loader.load()
-docs_list: list = []
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1000,
@@ -22,6 +20,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 splits: list[Document] = text_splitter.split_documents(docs)
 
+docs_list: list = []
 for doc in docs:
     docs_list.append(
         Document(
