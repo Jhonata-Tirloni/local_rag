@@ -27,7 +27,6 @@ Depois disso, é necessário importar algum arquivo para o modelo. No caso, já 
   2. Entre na pasta modules;
   3. Abra o arquivo "pdf_loader.py" e altere a linha 12 para o caminho aonde está seu pdf
      ```
-     from random import randint
     from uuid import uuid4
     from langchain_community.document_loaders import PyPDFLoader
     from langchain_text_splitters import RecursiveCharacterTextSplitter
