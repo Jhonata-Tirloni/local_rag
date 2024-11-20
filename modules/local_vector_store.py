@@ -16,9 +16,9 @@ def initialize_vector_store() -> Chroma:
     persistent_client = chromadb.PersistentClient()
 
     embeddings = HuggingFaceEmbeddings(
-        model_name="CAMINHO-PARA-O-MODELO-DE-EMBEDDING",
-        model_kwargs={"device": "cpu"}, # Pode mudar conforme o modelo
-        encode_kwargs={"normalize_embeddings": False}, # Pode mudar conforme o modelo
+        model_name="C:\\Users\\jhonata_tirloni\\Documents\\Embeddings models\\all-mpnet-base-v2",
+        model_kwargs={"device": "cpu"},
+        encode_kwargs={"normalize_embeddings": False},
     )
 
     vector_store = Chroma(

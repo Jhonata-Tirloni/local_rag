@@ -9,7 +9,7 @@ from langchain_core.documents import Document
 vector_store = initialize_vector_store()
 
 loader = PyPDFLoader(
-    r"CAMINHO-PARA-O-PDF"
+    r"C:\Users\jhonata_tirloni\Documents\Github\local_rag\example_pdf\d&d_guia_solo.pdf"
 )
 docs = loader.load()
 
