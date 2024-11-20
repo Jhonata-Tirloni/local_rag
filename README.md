@@ -26,22 +26,22 @@ Depois disso, é necessário importar algum arquivo para o modelo. No caso, já 
   1. Delete a pasta "chroma";
   2. Entre na pasta modules;
   3. Abra o arquivo "pdf_loader.py" e altere a linha 12 para o caminho aonde está seu pdf
-     ```
-    from uuid import uuid4
-    from langchain_community.document_loaders import PyPDFLoader
-    from langchain_text_splitters import RecursiveCharacterTextSplitter
-    from local_vector_store import initialize_vector_store
-    from langchain_core.documents import Document
-    
-    
-    vector_store = initialize_vector_store()
-    
-    loader = PyPDFLoader(
-        r"CAMIHO-PARA-O-ARQUIVO-PDF" <-- Altere aqui
-    )
-    docs = loader.load()
-     ```
-  4. Execute o arquivo via terminal com o comando:
+        ```
+            from uuid import uuid4
+            from langchain_community.document_loaders import PyPDFLoader
+            from langchain_text_splitters import RecursiveCharacterTextSplitter
+            from local_vector_store import initialize_vector_store
+            from langchain_core.documents import Document
+            
+            
+            vector_store = initialize_vector_store()
+            
+            loader = PyPDFLoader(
+                r"CAMIHO-PARA-O-ARQUIVO-PDF" <-- Altere aqui
+            )
+            docs = loader.load()
+        ```
+  5. Execute o arquivo via terminal com o comando:
      ```
      python pdf_loader.py
      ```
