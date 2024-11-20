@@ -3,7 +3,7 @@ from langchain_core.documents import Document
 from modules.local_vector_store import initialize_vector_store
 
 
-modelPath: str = r"CAMINHO-PARA-O-MODELO-LLM"
+modelPath: str = r"C:\Users\jhonata_tirloni\Documents\docchat-llm\src\models"
 pipe = pipeline("text-generation",
                 model=modelPath,
                 device_map="auto")
